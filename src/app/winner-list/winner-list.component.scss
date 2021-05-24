@@ -1,0 +1,20 @@
+.cardColor {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+  border-radius: 15px;
+  transition: 0.3s;
+  width: 15%;
+  float: left;
+  padding: 10px;
+  margin:0% 3% 0% 5%;
+  margin-bottom:10%;
+  background-color: rgb(178, 190, 118);
+  font-family: "Times New Roman", Times, serif;
+  cursor:pointer;
+  p{
+    font-size:10px
+  }
+
+  b{
+    font-size:30px
+  }
+}

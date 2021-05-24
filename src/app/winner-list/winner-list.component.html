@@ -1,0 +1,13 @@
+<ng-container *ngFor="let win of winners.drivers">
+  <div  [ngClass]="{'cardColor':win.driverId == winners.currentChampion,'card':win.driverId != winners.currentChampion}">
+  <div class="container">
+    <div>
+       <h4><b >{{win.givenName}} {{win.familyName}}</b></h4>
+    </div>
+    <p style="font-size: 15px;">
+      {{win.driverId}}
+    </p>
+  </div>
+  <div>{{win.nationality}}</div>
+</div>
+</ng-container>
