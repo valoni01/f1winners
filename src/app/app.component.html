@@ -1,15 +1,32 @@
+<!-- show sidenav -->
 <div id="mySidenav" #tpl class="sidenav">
   <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
   <h1 id="card-title">🏁{{yearlyWinners.year}}🏁</h1>
+   <ng-container *ngIf="!yearlyWinners.year;then loader;else winners">
+
+   </ng-container>
+</div>
+<ng-template #winners>
   <ng-container *ngIf="isOpen">
     <app-winner-list [winners]="yearlyWinners"></app-winner-list>
- </ng-container>
-</div>
+  </ng-container>
+</ng-template>
 
-<div>
+
+<!-- Display list of champions -->
+<div *ngIf="!raceList;then loader; else champs">
+
+</div>
+<ng-template #champs>
   <ng-container *ngFor="let list of raceList">
     <app-race-list [raceList]="list" (click)="openNav(this.list.year,this.list.drivers.driverId)"></app-race-list>
   </ng-container>
-</div>
+</ng-template>
+
+<!-- loader -->
+<ng-template #loader>
+  <div class="loader">  </div>
+</ng-template>
+
 
 

@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
 import { of } from 'rxjs';
 import { AppComponent } from './app.component';
@@ -81,7 +82,6 @@ it('should expect return 2021 when the openNav is called',()=>{
 
  expect(fixture.componentInstance.yearlyWinners.year).toEqual(2021)
 })
-
 
 
 });
